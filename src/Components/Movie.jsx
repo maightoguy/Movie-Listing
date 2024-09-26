@@ -22,7 +22,7 @@ const Movie = () => {
       try {
         const apiUrl = `${CONTENT_TYPES[category]}${movieid}?api_key=4913407cf8779743004ecf4de56a631e`;
         const response = await fetch(apiUrl);
-        const fetchedData = await response.json();
+        const fetchedData = response.json();
 
         if (response.ok) {
           // Check for successful response
